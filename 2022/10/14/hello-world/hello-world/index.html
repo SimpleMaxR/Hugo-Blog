@@ -65,11 +65,13 @@
     <aside class='l_left' layout='post'>
     
 
+  
 
 <header class="header">
 
-<div class="logo-wrap"><a class="title" href="/Hugo-Blog/"><div class="main">Hugo's Blog</div></a></div>
+<div class="logo-wrap"><a class="title" href="/Hugo-Blog/"><div class="main" ff="title">Hugo's Blog</div></a></div>
 <nav class="menu dis-select"><a class="nav-item active" href="/Hugo-Blog/">Blog</a><a class="nav-item" href="/Hugo-Blog/wiki/">Wiki</a><a class="nav-item" href="/Hugo-Blog/notes/">笔记</a><a class="nav-item" href="/Hugo-Blog/more/">更多</a></nav></header>
+
 
 <div class="widgets">
 
@@ -120,8 +122,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>This site was deployed by <a href="https://simplemaxr.github.io/Hugo-Blog/Hugo-Blog/">@Hugo Ho</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.9.0" title="v1.9.0">Stellar</a>.</p>
-</div></footer>
+<footer class="page-footer reveal fs12"><hr><div class="text"></div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
@@ -237,11 +238,13 @@
 
   // required plugins (only load if needs)
   stellar.plugins = {
-    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
-    sitesjs: '/Hugo-Blog/js/plugins/sites.js',
-    friendsjs: '/Hugo-Blog/js/plugins/friends.js',
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
   };
 
+  // stellar js
+  stellar.plugins.stellar = Object.assign();
+
+  stellar.plugins.marked = Object.assign();
   // optional plugins
   if ('true' == 'true') {
     stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});

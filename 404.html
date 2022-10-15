@@ -61,11 +61,13 @@
     <aside class='l_left' layout='404'>
     
 
+  
 
 <header class="header">
 
-<div class="logo-wrap"><a class="title" href="/Hugo-Blog/"><div class="main">Hugo's Blog</div></a></div>
+<div class="logo-wrap"><a class="title" href="/Hugo-Blog/"><div class="main" ff="title">Hugo's Blog</div></a></div>
 <nav class="menu dis-select"><a class="nav-item" href="/Hugo-Blog/">Blog</a><a class="nav-item" href="/Hugo-Blog/wiki/">Wiki</a><a class="nav-item" href="/Hugo-Blog/notes/">笔记</a><a class="nav-item" href="/Hugo-Blog/more/">更多</a></nav></header>
+
 
 <div class="widgets">
 <div class="widget-wrap" id="markdown"><div class="widget-header cap dis-select"><span class="name">Stellar 入门指南</span></div><div class="widget-body fs14"><p>欢迎使用 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/">Stellar</a> 主题，下面是您的入门指南，祝您使用愉快！<br><br><br><strong>第一步</strong><br>创建 <code>blog/_config.stellar.yml</code> 文件，在此文件中填写需要自定义的主题配置。<br><br><br><strong>第二步</strong><br>创建 <code>blog/source/_data/widgets.yml</code> 文件，此文件中填写需要自定义的侧边栏组件，例如 <code>welcome</code> 组件。<br><br><br>如果有任何疑问，请先查阅<a target="_blank" rel="noopener" href="https://xaoxuu.com/wiki/stellar/">文档</a>，如果文档中没有提供，请提 <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/issues/">issue</a> 向开发中询问。</p>
@@ -98,8 +100,7 @@
 
 
       
-<footer class="page-footer reveal fs12"><hr><div class="text"><p>This site was deployed by <a href="https://simplemaxr.github.io/Hugo-Blog/Hugo-Blog/">@Hugo Ho</a> using <a target="_blank" rel="noopener" href="https://github.com/xaoxuu/hexo-theme-stellar/tree/1.9.0" title="v1.9.0">Stellar</a>.</p>
-</div></footer>
+<footer class="page-footer reveal fs12"><hr><div class="text"></div></footer>
 
       <div class='float-panel mobile-only blur' style='display:none'>
   <button type='button' class='sidebar-toggle mobile' onclick='sidebar.toggle()'>
@@ -215,11 +216,13 @@
 
   // required plugins (only load if needs)
   stellar.plugins = {
-    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js',
-    sitesjs: '/Hugo-Blog/js/plugins/sites.js',
-    friendsjs: '/Hugo-Blog/js/plugins/friends.js',
+    jQuery: 'https://fastly.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.min.js'
   };
 
+  // stellar js
+  stellar.plugins.stellar = Object.assign();
+
+  stellar.plugins.marked = Object.assign();
   // optional plugins
   if ('true' == 'true') {
     stellar.plugins.lazyload = Object.assign({"enable":true,"js":"https://fastly.jsdelivr.net/npm/vanilla-lazyload@17.3.1/dist/lazyload.min.js","transition":"blur"});
